@@ -1,0 +1,4 @@
+2015-11-02T14:58:28: Launching bolt session for c:\inetpub\wwwroot\starcarltonhoteldemo\.starcarltonhoteldemo.boltdata - SessionId: 883d515f-86d1-493a-86e1-29ffa1a4913b
+2015-11-02T14:58:45: GET http://127.0.0.1:11235/serveravailable.json 200 0.001s 
+2015-11-02T14:59:15: GET http://127.0.0.1:11235/serveravailable.json 200 0.001s 
+2015-11-02T14:59:18: Closing bolt session for c:\programdata\ncoverdata - SessionId: 62761d91-f966-41fc-a759-9df9fe792a72
