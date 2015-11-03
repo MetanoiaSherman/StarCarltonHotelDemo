@@ -19,6 +19,7 @@
     <EntitySetMapping Name="Reservations">
       <EntityTypeMapping TypeName="StarCarltonHotelDemo.Models.Reservation">
         <MappingFragment StoreEntitySet="Reservation">
+          <ScalarProperty Name="ReservationCode" ColumnName="ReservationCode" />
           <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
           <ScalarProperty Name="RoomId" ColumnName="RoomId" />
           <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />

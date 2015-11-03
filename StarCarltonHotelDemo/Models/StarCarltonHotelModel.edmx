@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="StarCarltonHotelDemo.Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="StarCarltonHotelDemo.Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="CustomerId" />
@@ -26,6 +26,7 @@
           <Property Name="ReservationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RoomId" Type="int" Nullable="false" />
           <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="ReservationCode" Type="varchar" MaxLength="8" />
           <Property Name="ReservationStartDate" Type="date" />
           <Property Name="ReservationEndDate" Type="date" />
           <Property Name="NumOfOccupants" Type="int" />
@@ -167,8 +168,7 @@
             <End Role="Room" EntitySet="Room" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="StarCarltonHotelDemo.Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -203,6 +203,7 @@
           <NavigationProperty Name="Customer" Relationship="Self.FK_Customer_Reservation" FromRole="Reservation" ToRole="Customer" />
           <NavigationProperty Name="ReservationStatus" Relationship="Self.FK_Reservation_ReservationStatus" FromRole="Reservation" ToRole="ReservationStatus" />
           <NavigationProperty Name="Room" Relationship="Self.FK_Reservation_Room" FromRole="Reservation" ToRole="Room" />
+          <Property Name="ReservationCode" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="ReservationStatus">
           <Key>
@@ -368,6 +369,7 @@
           <EntitySetMapping Name="Reservations">
             <EntityTypeMapping TypeName="StarCarltonHotelDemo.Models.Reservation">
               <MappingFragment StoreEntitySet="Reservation">
+                <ScalarProperty Name="ReservationCode" ColumnName="ReservationCode" />
                 <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
                 <ScalarProperty Name="RoomId" ColumnName="RoomId" />
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />

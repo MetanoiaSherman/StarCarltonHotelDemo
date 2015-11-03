@@ -21,6 +21,7 @@
     <Property Name="ReservationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="RoomId" Type="int" Nullable="false" />
     <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="ReservationCode" Type="varchar" MaxLength="8" />
     <Property Name="ReservationStartDate" Type="date" />
     <Property Name="ReservationEndDate" Type="date" />
     <Property Name="NumOfOccupants" Type="int" />

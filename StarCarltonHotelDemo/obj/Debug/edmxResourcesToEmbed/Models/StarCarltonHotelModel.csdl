@@ -31,6 +31,7 @@
     <NavigationProperty Name="Customer" Relationship="Self.FK_Customer_Reservation" FromRole="Reservation" ToRole="Customer" />
     <NavigationProperty Name="ReservationStatus" Relationship="Self.FK_Reservation_ReservationStatus" FromRole="Reservation" ToRole="ReservationStatus" />
     <NavigationProperty Name="Room" Relationship="Self.FK_Reservation_Room" FromRole="Reservation" ToRole="Room" />
+    <Property Name="ReservationCode" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="ReservationStatus">
     <Key>

@@ -23,6 +23,7 @@ namespace StarCarltonHotelDemo.Models
         public Nullable<System.DateTime> DateCreated { get; set; }
         public Nullable<System.DateTime> DateModified { get; set; }
         public int ReservationStatusId { get; set; }
+        public string ReservationCode { get; set; }
     
         public virtual Customer Customer { get; set; }
         public virtual ReservationStatus ReservationStatus { get; set; }
